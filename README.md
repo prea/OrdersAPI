@@ -19,7 +19,7 @@ You can change the connection string in appsettings.json <br>
 
 
 
-Getting started :
+Getting started:<br>
 When you run the project the first time, it will create the database and populate with the admin user.<br>
 username : admin<br>
 password : admin<br>
