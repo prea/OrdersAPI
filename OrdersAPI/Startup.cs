@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Xml;
@@ -85,8 +86,19 @@ namespace OrdersAPI
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(options =>
             {
+                var security = new Dictionary<string, IEnumerable<string>>
+                {
+                    {"Bearer", new string[] { }},
+                };
                 options.SwaggerDoc("v1", new Info { Title = "Orders API", Version = "v1" });
-
+                options.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                    Name = "Authorization",
+                    In = "header",
+                    Type = "apiKey"
+                });
+                options.AddSecurityRequirement(security);
                 // Get xml comments path
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -129,6 +141,7 @@ namespace OrdersAPI
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders API V1");
+                c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None); 
             });
             app.UseMvc(routes =>
             {
