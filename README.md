@@ -1,6 +1,6 @@
 # OrdersAPI
 
-The project is using :<br>
+The project was made using:<br>
 .Net Core 2.2 <br>
 Entity Framework Core<br>
 Swagger<br>
