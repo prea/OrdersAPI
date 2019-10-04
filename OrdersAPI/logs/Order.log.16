@@ -1,0 +1,3 @@
+[Header]
+2019/10/04 08:41:21.221 [1] DEBUG OrdersAPI.Startup - Configure: in startup!!!
+2019/10/04 08:42:29.578 [6] ERROR OrdersAPI.Controllers.AuthorizationController - Something went wrong inside CreateOrder action: The method or operation is not implemented.

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrdersAPI</name>
+    </assembly>
+    <members>
+        <member name="M:OrdersAPI.Controllers.AuthorizationController.Login(OrdersModel.Model.User,OrdersAPI.Helpers.SigningConfigurations,OrdersAPI.Helpers.TokenConfigurations)">
+            <summary>
+             Login method
+            </summary>
+            <param name="request"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:OrdersAPI.Controllers.OrderController.GetOrders">
+            <summary>
+            Return a list of orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OrdersAPI.Controllers.OrderController.GetOrderById(System.Int32)">
+            <summary>
+            Return a Order filter by ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrdersAPI.Controllers.OrderController.CreateOrder(OrdersModel.Model.Order)">
+            <summary>
+            Create or Update a Order
+            if an ID is provided the order is updated
+            </summary>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
