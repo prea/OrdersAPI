@@ -24,7 +24,8 @@ When you run the project the first time, it will create the database and populat
 username : admin<br>
 password : admin<br>
 
-when the project is built and is running, it will open the browser in the swagger page, that was used to create the documetation about the methods. The project contains a Unit test and Integration Test<br>
+when the project is built and is running, it will open the browser in the swagger page, that was used to create the documetation about the methods. <br>
+The project contains a Unit test and Integration Test as well.<br>
 
 <img src="https://github.com/prea/OrdersAPI/blob/master/swagger_orders.png">
 
